@@ -1,0 +1,452 @@
+/* Reset default margin and padding on body */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+/* Top Section Styles */
+.top-section {
+  background-color: #121212;
+  padding: 0px;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: space between;
+  margin-left: 100px; /* Adjust the margin as needed */
+  max-width: 100%; /* Set the max-width to 100% */
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1200px) {
+  .top-section {
+    margin-left: 100px; /* Use a fixed value for larger screens */
+  }
+}
+
+/* Style for the logo container (YouTube logo and text) */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Style for the YouTube logo */
+.youtube-logo {
+  width: 70px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+/* Style for the YouTube text link */
+.top-section-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  position: relative; /* Add relative positioning */
+  left: -12px; /* Adjust the left position to move the text closer to the logo */
+}
+
+/* Style for the YouTube logo link and the YouTube text link */
+.logo-container a, .top-section-text a {
+  text-decoration: none; /* Remove the underline from the links */
+}
+
+.profile-link img {
+  width: 35px; /* Increase the width as needed */
+  height: 35px; /* Increase the height as needed */
+  margin-right: 20px; /* Adjust the right margin to create space between the profile icon and top section icons */
+  margin-left: 5px; /* Adjust the left margin for additional spacing if needed */
+}
+
+/* Style for the icons container */
+.icons-container {
+  display: flex; /* Arrange the icons in a horizontal line */
+  align-items: center; /* Vertically align icons in the middle */
+}
+
+/* Style for the parent container of top icons */
+.top-section-icons-parent {
+  display: flex;
+  align-items: center;
+}
+
+.top-section-icons-parent .top-section-icons {
+  position: relative;
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+  margin-right: 20px; /* Add space between icons */
+  vertical-align: middle; /* Vertically align icons in the middle */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+.top-section-icons-parent .top-section-icons::before {
+  content: "";
+  position: absolute;
+  width: 50px; /* Adjust the size of the circle as needed */
+  height: 50px; /* Adjust the size of the circle as needed */
+  background: gray; /* Background color of the circle */
+  border-radius: 50%; /* Makes it a circle */
+  top: 50%; /* Vertically center the circle */
+  left: 50%; /* Horizontally center the circle */
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1; /* Place the circle behind the icons */
+}
+
+.top-section-icons-parent .top-section-icons:hover::before {
+  opacity: 0.2;
+}
+
+.top-section-icons-parent .top-section-icons::after {
+  content: attr(alt);
+  position: absolute;
+  left: 50%;
+  top: 200%; /* Position it initially below the icon */
+  background: #303030;
+  color: #fff;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  padding: 5px 10px;
+  border-radius: 4px;
+  transform: translateX(-50%) translateY(-20px); /* Initial position above */
+  opacity: 0;
+  font-size: 14px; /* Set the font size */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.top-section-icons-parent .top-section-icons:hover::after {
+  opacity: 0.9; /* Adjust this opacity value to make it slightly transparent */
+  transform: translateX(-50%) translateY(0); /* Slide it down on hover */
+}
+
+/* Styles for individual icons */
+.upload-button img {
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+}
+
+.youtube-apps-button img {
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+}
+
+.notification-button img {
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+}
+
+/* Individual styles for specific icons */
+.top-section-icons.upload-button::after {
+  content: "Create";
+  /* Add any specific styles you want for this icon's text */
+}
+
+.top-section-icons.youtube-apps-button::after {
+  content: "YouTube apps";
+  /* Add any specific styles you want for this icon's text */
+}
+
+.top-section-icons.notification-button::after {
+  content: "Notifications";
+  /* Add any specific styles you want for this icon's text */
+}
+
+/* Voice search container */
+.voice-search {
+  position: relative;
+  cursor: pointer;
+  width: 40px; /* Set a fixed width for the background */
+  height: 40px; /* Set a fixed height for the background */
+  border-radius: 50%; /* Create a circular background */
+  background-color: #303030; /* Add your background color here */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+/* Voice search hover after effect */
+.voice-search::after {
+  content: "Search with your voice";
+  position: absolute;
+  left: 50%;
+  top: 140%; /* Position it initially below the icon */
+  background: #303030;
+  color: #fff;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  padding: 5px 10px;
+  border-radius: 4px;
+  transform: translateX(-50%) translateY(-20px); /* Initial position above */
+  opacity: 0;
+  font-size: 14px; /* Set the font size */
+  transition: transform 0.3s, opacity 0.3s;
+  pointer-events: none;
+}
+
+.voice-search:hover::after {
+  opacity: 0.9;
+  transform: translateX(-50%) translateY(0); /* Slide it down on hover */
+}
+
+/* Adjust the size of the voice search icon and text */
+.voice-search img {
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+}
+
+/* Search container and input styles */
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Style the search bar */
+.search-bar {
+  width: 500px;
+  padding: 10px 15px 10px 15px; /* Add extra padding to the left to move the text away from the border */
+  font-size: 16px;
+  color: lightgray;
+  border: 2px solid #303030;
+  border-radius: 20px 0 0 20px; /* Rounded corners on the left side */
+  background-color: #121212; /* Light gray background color */
+  text-align: left;
+}
+
+.search-bar:focus {
+  outline: none;
+  border: 2px solid #303030;
+}
+
+/* Style the search button */
+.search-button {
+  height: 42px;
+  width: 52px;
+  border: 2px solid #303030;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  background-color: #303030;
+  cursor: pointer;
+  position: relative; /* Required for pseudo-element positioning */
+}
+
+/* Search button hover after effect */
+.search-container .search-button::after {
+  content: "Search";
+  position: absolute;
+  left: 50%;
+  top: 140%; /* Position it initially below the button */
+  background: #303030;
+  color: #fff;
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  padding: 5px 10px;
+  border-radius: 4px;
+  transform: translateX(-50%) translateY(-20px); /* Initial position above */
+  opacity: 0;
+  font-size: 14px; /* Set the font size */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.search-container .search-button:hover::after {
+  opacity: 0.9;
+  transform: translateX(-50%) translateY(0); /* Slide it down on hover */
+}
+
+/* Style the search icon */
+.search-button img {
+  width: 24px; /* Adjust the size as needed */
+}
+
+/* Common styles for the sidebar container */
+.sidebar {
+  width: 100px;
+  height: 100%; /* Set the height to 100% to match the top section's height */
+  position: fixed;
+  top: 0;
+  background-color: #121212;
+  color: #aaa;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  margin-right: 20px;
+}
+
+.hamburger-menu {
+  display: inline-block;
+  width: 50px; /* Set the desired width */
+  height: 50px; /* Set the desired height */
+  border-radius: 50%; /* Make it circle-shaped */
+  margin-top: 16px; /* Adjust the margin to move it down */
+  text-align: center; /* Center horizontally */
+  line-height: 50px; /* Center vertically */
+  transition: transform 0.3s; /* Add a transition for smooth scaling */
+  position: relative; /* Use relative positioning */
+  top: 6px; /* Adjust the top position to move it down by 8 pixels */
+}
+
+
+/* Hover effect for hamburger menu icon */
+.hamburger-menu:hover {
+  transform: scale(1.2); /* Grow slightly on hover (adjust the scale factor as needed) */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+/* Sidebar icon styles */
+.sidebar-icons {
+  width: 20px; /* Set the width to 20px */
+  height: 20px; /* Set the height to 20px */
+  display: inline-block;
+  margin-right: 10px; /* Adjust the right margin as needed */
+  vertical-align: middle; /* Vertically align icons in the middle of the list item */
+}
+
+.small-icon {
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+  display: block; /* Make the icon a block element to control its vertical alignment */
+  margin: 0 auto 8px auto; /* Center the icon vertically within the list item and add some spacing below it */
+}
+
+/* Other styles for the sidebar text and links */
+.sidebar p,
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 8px 0;
+  font-size: 10px;
+}
+
+/* Remove list-style (dots) from ul elements inside the sidebar */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Add hover effect for both text and icons */
+.sidebar-item:hover {
+  background-color: #242424; /* Set the desired background color for the hover effect */
+  color: #aaa; /* Set the desired text color for the hover effect */
+  border-radius: 5px; /* Add rounded corners for a smoother effect */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+.sidebar-item {
+  padding: 2px 5px 2px 5px; /* Adjust the padding as needed */
+  transition: background-color 0.2s;
+}
+
+/* Content Section Styles */
+.content-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  margin-left: 160px; /* Increase the margin to create more space for the sidebar */
+  /* Add any other styles you need for the content section */
+}
+
+.thumbnail-container .video-time-box {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.thumbnail-container:hover .video-time-box {
+  opacity: 0;
+}
+
+.thumbnail-container {
+  position: relative; /* Set the position to relative for the container */
+}
+
+.thumbnail {
+  width: 400px;
+  border-radius: 20px;
+  transition: border-radius 0.2s;
+  position: relative; /* Set the position to relative for the thumbnail */
+  z-index: 0;
+}
+
+.thumbnail:hover {
+  border-radius: 0;
+}
+
+.content {
+  width: 400px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+  align-items: flex-start; /* Align the content to the top */
+}
+
+.video-time-box {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-top-left-radius: 5px;
+  z-index: 1;
+}
+
+/* Title Styles */
+.content h2 {
+  font-size: 14px;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  margin: 0 0 5px; /* Add margin to separate the title and channel name */
+  white-space: normal;
+  max-width: 300px;
+  font-weight: bold; /* Add this property to make the text bold */
+  padding: 10px; /* You can set padding as needed */
+}
+
+.content h2 a {
+  text-decoration: none;
+  color: #f1f1f1; /* Set the desired link color for video titles */
+}
+
+/* Modify the baseline alignment of text inside .content p elements */
+.content p {
+  color: #aaa;
+  vertical-align: baseline; /* Adjust the baseline alignment as needed */
+  font-size: 14px;
+  margin: 5px 0 5px 50px; /* Your existing styles */
+}
+
+/* Style for the channel icon */
+.channel-icon img {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Maintain the aspect ratio */
+  border-radius: 50%; /* Create a circle shape */
+  margin-right: 10px; /* Add spacing between the icon and video title */
+  margin-top: 7px; /* Adjust the top margin for better alignment */
+  float: left; /* Float the channel icon to the left */
+}
+
+/* Dark Mode Styles */
+.dark-mode p {
+  color: #606060;
+}
+
+/* Hover Styles */
+a:hover img.thumbnail {
+  cursor: pointer;
+  /* Add other hover styles as needed */
+}
+
+/* Link Styles - Remove underlines from links within .content and .thumbnail-link */
+.content a {
+  color: #aaa;
+  text-decoration: none;
+}

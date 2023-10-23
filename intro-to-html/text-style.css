@@ -1,0 +1,51 @@
+/* Video Title */
+.video-tittle {
+  color: rgb(33, 37, 41);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Video Stats */
+.video-stats, .channel-name {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #606060;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Video Description */
+.video-description {
+  font-size: 14px;
+  color: #606060;
+  line-height: 20px;
+  margin-bottom: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Apple Banner */
+.apple-banner {
+  background-color: #e34140;
+  padding: 16px;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/* Shop Link */
+.shop-link {
+  color: white;
+  cursor: pointer;
+  text-decoration: none; /* Remove the underline by default */
+}
+
+/* Hover state */
+.shop-link:hover {
+  text-decoration: underline; /* Add the underline on hover */
+  /* You can also add additional styles for the hover state if needed */
+}

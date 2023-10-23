@@ -1,0 +1,456 @@
+/* Reset some default styles */
+body, h1, h2, p {
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
+/* Set the background color for the body */
+body {
+  background-color: #121212; /* Set the background color to a dark gray (#121212) */
+  color: #fff; /* Set the text color for the body to white (#fff) */
+  font-family: Arial, sans-serif; /* Set the font to Arial or a similar sans-serif font */
+}
+
+/* Common styles for the sidebar container */
+.sidebar {
+  width: 100px; /* Set the width of the sidebar to 100 pixels */
+  height: 100%; /* Set the height to 100% to match the top section's height */
+  position: fixed; /* Fix the position to stay in place during scrolling */
+  top: 0; /* Position it at the top of the viewport */
+  background-color: #121212; /* Set the background color to a dark gray (#121212) */
+  color: #aaa; /* Set the text color to a light gray (#aaa) */
+  text-align: center; /* Center-align the text */
+  display: flex; /* Use a flexible (flex) layout */
+  flex-direction: column; /* Arrange items in a column layout */
+  align-items: center; /* Center-align items horizontally */
+  justify-content: flex-start; /* Align items to the top vertically */
+  padding: 5px; /* Add 5 pixels of padding to the content inside the sidebar */
+  margin-right: 20px; /* Set a 20-pixel margin on the right side */
+}
+
+/* Remove list-style (dots) from ul elements inside the sidebar */
+.sidebar ul {
+  list-style: none; /* Remove the bullet points from lists */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.sidebar-item {
+  padding: 2px 5px 2px 5px; /* Set the top, right, bottom, and left padding as needed */
+  transition: background-color 0.2s; /* Add a transition effect on background color */
+}
+
+.hamburger-menu {
+  display: inline-block;
+  width: 50px; /* Set the width of the hamburger menu */
+  height: 50px; /* Set the height of the hamburger menu */
+  border-radius: 50%; /* Make it circle-shaped */
+  margin-top: 16px; /* Adjust the margin to move it down */
+  text-align: center; /* Center horizontally */
+  line-height: 50px; /* Center vertically */
+  transition: transform 0.3s; /* Add a transition for smooth scaling */
+  position: relative; /* Use relative positioning */
+  top: 6px; /* Adjust the top position as needed */
+}
+
+/* Hover effect for hamburger menu icon */
+.hamburger-menu:hover {
+  transform: scale(1.2); /* Grow slightly on hover (adjust the scale factor as needed) */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+/* Sidebar icon styles */
+.sidebar-icons {
+  width: 20px; /* Set the width to 20px */
+  height: 20px; /* Set the height to 20px */
+  display: inline-block; /* Display icons as inline-block to align them horizontally */
+  margin-right: 10px; /* Adjust the right margin as needed */
+  vertical-align: middle; /* Vertically align icons in the middle of the list item */
+}
+
+/* Small icons (e.g., sidebar icons) styles */
+.small-icon {
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+  display: block; /* Make the icon a block element to control its vertical alignment */
+  margin: 0 auto 8px auto; /* Center the icon vertically within the list item and add some spacing below it */
+}
+
+/* Other styles for the sidebar text and links */
+.sidebar p,
+.sidebar a {
+  color: white; /* Set the text color to white */
+  text-decoration: none; /* Remove underlines from links */
+  display: block; /* Display elements as block-level to control their layout */
+  margin: 8px 0; /* Adjust top and bottom margins as needed */
+  font-size: 10px; /* Set the font size to 10px */
+}
+
+
+/* Add hover effect for both text and icons */
+.sidebar-item:hover {
+  background-color: #242424; /* Set the desired background color for the hover effect */
+  color: #aaa; /* Set the desired text color for the hover effect */
+  border-radius: 5px; /* Add rounded corners for a smoother effect */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+/* Top Section Styles */
+.top-section {
+  background-color: #121212; /* Set the background color for the top section */
+  padding: 0px; /* Adjust padding as needed */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center vertically */
+  justify-content: space-between; /* Space items evenly horizontally */
+  margin-left: 100px; /* Adjust the margin as needed */
+  max-width: 100%; /* Set the max-width to 100% */
+  position: relative; /* Establish a stacking context */
+  z-index: 1; /* Set the z-index for layering elements */
+}
+
+/* Media Query: Adjustments for larger screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+  .top-section {
+    margin-left: 100px; /* Use a fixed value for larger screens */
+  }
+}
+
+/* Style for the logo container (YouTube logo and text) */
+.logo-container {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center child elements vertically */
+}
+
+/* Style for the YouTube logo link and the YouTube text link */
+.logo-container a, .top-section-text a {
+  text-decoration: none; /* Remove the underline from the links */
+}
+
+/* Style for the YouTube logo */
+.youtube-logo {
+  width: 70px; /* Adjust the width as needed */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+/* Style for the YouTube text link */
+.top-section-text {
+  font-size: 28px; /* Set the font size for the text link */
+  font-weight: bold; /* Apply bold font weight */
+  color: white; /* Set text color to white */
+  position: relative; /* Add relative positioning */
+  left: -12px; /* Adjust the left position to move the text closer to the logo */
+}
+
+.profile-link img {
+  width: 35px; /* Increase the width as needed */
+  height: 35px; /* Increase the height as needed */
+  margin-right: 20px; /* Adjust the right margin to create space between the profile icon and top section icons */
+  margin-left: 5px; /* Adjust the left margin for additional spacing if needed */
+}
+
+/* Style for the icons container */
+.icons-container {
+  display: flex; /* Arrange the icons in a horizontal line */
+  align-items: center; /* Vertically align icons in the middle */
+}
+
+/* Style for the parent container of top icons */
+.top-section-icons-parent {
+  display: flex; /* Display the icons in a flex container */
+  align-items: center; /* Vertically center the icons within the container */
+}
+
+/* Style for individual top icons within the parent container */
+.top-section-icons-parent .top-section-icons {
+  position: relative; /* Add relative positioning */
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+  margin-right: 20px; /* Add space between icons */
+  vertical-align: middle; /* Vertically align icons in the middle */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+/* Pseudo-element styles for top icons */
+.top-section-icons-parent .top-section-icons::before {
+  content: ""; /* Add content for the pseudo-element */
+  position: absolute; /* Position the pseudo-element absolutely */
+  width: 50px; /* Adjust the size of the circle as needed */
+  height: 50px; /* Adjust the size of the circle as needed */
+  background: gray; /* Background color of the circle */
+  border-radius: 50%; /* Makes it a circle */
+  top: 50%; /* Vertically center the circle */
+  left: 50%; /* Horizontally center the circle */
+  transform: translate(-50%, -50%); /* Center the circle within its parent */
+  opacity: 0; /* Initial opacity is 0 (invisible) */
+  transition: opacity 0.3s ease-in-out; /* Add a transition for opacity changes */
+  z-index: -1; /* Place the circle behind the icons */
+}
+
+/* Style for individual top icons within the parent container on hover */
+.top-section-icons-parent .top-section-icons:hover::before {
+  opacity: 0.2; /* Reduce opacity on hover */
+}
+
+/* Pseudo-element styles for top icons */
+.top-section-icons-parent .top-section-icons::after {
+  content: attr(alt); /* Display the alt attribute text as content */
+  position: absolute; /* Position the pseudo-element absolutely */
+  left: 50%; /* Horizontally center the pseudo-element */
+  top: 200%; /* Position it initially below the icon */
+  background: #303030; /* Background color for the pseudo-element */
+  color: #fff; /* Text color for the pseudo-element */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  padding: 5px 10px; /* Add padding to the pseudo-element */
+  border-radius: 4px; /* Round the corners of the pseudo-element */
+  transform: translateX(-50%) translateY(-20px); /* Initial position above the icon */
+  opacity: 0; /* Initial opacity is 0 (invisible) */
+  font-size: 14px; /* Set the font size for the pseudo-element */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add transitions for smooth effects */
+  pointer-events: none; /* Prevent interaction with the pseudo-element */
+}
+
+.top-section-icons-parent .top-section-icons:hover::after {
+  opacity: 0.9; /* Adjust this opacity value to make it slightly transparent */
+  transform: translateX(-50%) translateY(0); /* Slide it down on hover */
+}
+
+/* Styles for the text content of specific icons */
+.top-section-icons.upload-button::after {
+  content: "Create"; /* Text content for the "Create" icon */
+  /* Add any specific styles you want for this icon's text */
+}
+
+.top-section-icons.youtube-apps-button::after {
+  content: "YouTube apps"; /* Text content for the "YouTube apps" icon */
+  /* Add any specific styles you want for this icon's text */
+}
+
+.top-section-icons.notification-button::after {
+  content: "Notifications"; /* Text content for the "Notifications" icon */
+  /* Add any specific styles you want for this icon's text */
+}
+
+/* Style for the voice search container */
+.voice-search {
+  position: relative; /* Set the position to relative */
+  cursor: pointer; /* Change cursor to a pointer on hover */
+  width: 40px; /* Set a fixed width for the background */
+  height: 40px; /* Set a fixed height for the background */
+  border-radius: 50%; /* Create a circular background */
+  background-color: #303030; /* Background color for the container */
+  display: flex; /* Use flex display */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  margin-left: 10px; /* Add a left margin */
+}
+
+/* Styles for individual icons */
+.upload-button img,
+.youtube-apps-button img,
+.notification-button img,
+.voice-search img,
+.search-button img {
+  width: 25px; /* Adjust the width as needed */
+  height: 25px; /* Adjust the height as needed */
+}
+
+/* Voice search hover after effect */
+.voice-search::after {
+  content: "Search with your voice"; /* Text content for the hover effect */
+  position: absolute; /* Set the position to absolute */
+  left: 50%; /* Center horizontally */
+  top: 140%; /* Position it initially below the icon */
+  background: #303030; /* Background color for the effect */
+  color: #fff; /* Text color for the effect */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  padding: 5px 10px; /* Add padding to the effect box */
+  border-radius: 4px; /* Create rounded corners */
+  transform: translateX(-50%) translateY(-20px); /* Initial position above */
+  opacity: 0; /* Make it invisible by default */
+  font-size: 14px; /* Set the font size */
+  transition: transform 0.3s, opacity 0.3s; /* Add transitions for smooth animation */
+  pointer-events: none; /* Make sure it's not clickable */
+}
+
+/* Voice search hover effect */
+.voice-search:hover::after {
+  opacity: 0.9; /* Increase opacity on hover for visibility */
+  transform: translateX(-50%) translateY(0); /* Slide it down on hover */
+}
+
+/* Search container and input styles */
+.search-container {
+  display: flex; /* Display as a flex container */
+  align-items: center; /* Vertically align items in the center */
+  margin-right: auto; /* Adjust the margin on the right side */
+  margin-left: auto; /* Adjust the margin on the left side */
+}
+
+/* Style the search bar */
+.search-bar {
+  width: 500px; /* Set the desired width */
+  padding: 10px 15px; /* Add extra padding to the top and bottom, and left to move the text away from the border */
+  font-size: 16px; /* Set the font size */
+  color: lightgray; /* Text color */
+  border: 2px solid #303030; /* Border style and color */
+  border-radius: 20px 0 0 20px; /* Rounded corners on the left side */
+  background-color: #121212; /* Light gray background color */
+  text-align: left; /* Align text to the left within the input field */
+}
+
+/* Style for the focused state of the search bar */
+.search-bar:focus {
+  outline: none; /* Remove the focus outline */
+  border: 2px solid #303030; /* Set the border style and color on focus */
+}
+
+/* Style the search button */
+.search-button {
+  height: 42px; /* Set the desired height */
+  width: 52px; /* Set the desired width */
+  border: 2px solid #303030; /* Set the border style and color */
+  border-left: none; /* Remove the left border to create a separated button */
+  border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
+  background-color: #303030; /* Background color for the button */
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  position: relative; /* Required for pseudo-element positioning */
+}
+
+/* Search button hover after effect */
+.search-container .search-button::after {
+  content: "Search"; /* Text content for the after pseudo-element */
+  position: absolute; /* Positioning the pseudo-element */
+  left: 50%; /* Horizontally center the pseudo-element */
+  top: 140%; /* Position it initially below the button */
+  background: #303030; /* Background color for the pseudo-element */
+  color: #fff; /* Text color for the pseudo-element */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  padding: 5px 10px; /* Add padding for spacing */
+  border-radius: 4px; /* Apply rounded corners to the pseudo-element */
+  transform: translateX(-50%) translateY(-20px); /* Initial position above the button */
+  opacity: 0; /* Initial opacity (hidden) */
+  font-size: 14px; /* Set the font size */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Add transitions for smooth effects */
+  pointer-events: none; /* Disable pointer events to allow interaction with elements beneath */
+}
+
+/* Search button hover after effect */
+.search-container .search-button:hover::after {
+  opacity: 0.9; /* Increase opacity on hover for the after pseudo-element */
+  transform: translateX(-50%) translateY(0); /* Slide it down on hover */
+}
+
+/* Content Section Styles */
+.content-section {
+  display: flex; /* Display as a flex container */
+  flex-wrap: wrap; /* Allow flex items to wrap to the next row */
+  justify-content: flex-start; /* Align flex items to the start (left) of the container */
+  align-items: flex-start; /* Align flex items to the start (top) of the container */
+  padding: 20px; /* Add padding to the content section */
+  margin-left: 160px; /* Increase the margin to create more space for the sidebar */
+  /* Add any other styles you need for the content section */
+}
+
+/* Video time box within the thumbnail container */
+.thumbnail-container .video-time-box {
+  opacity: 1; /* Initial opacity */
+  transition: opacity 0.5s; /* Apply a smooth opacity transition */
+}
+
+/* Reduce video time box opacity on hover */
+.thumbnail-container:hover .video-time-box {
+  opacity: 0;
+}
+
+/* Container for the thumbnail */
+.thumbnail-container {
+  position: relative; /* Set the position to relative for the container */
+}
+
+/* Thumbnail image */
+.thumbnail {
+  width: 400px; /* Set the width for the thumbnail */
+  border-radius: 20px; /* Apply border-radius for rounded corners */
+  transition: border-radius 0.2s; /* Smoothly transition border-radius changes */
+  position: relative; /* Set the position to relative for the thumbnail */
+  z-index: 0; /* Initial z-index */
+}
+
+/* Remove border-radius on thumbnail hover for a different effect */
+.thumbnail:hover {
+  border-radius: 0;
+}
+
+/* Content styles */
+.content {
+  width: 400px; /* Set the width for content */
+  margin-right: 20px; /* Adjust the right margin as needed */
+  margin-bottom: 20px; /* Adjust the bottom margin as needed */
+  text-align: left; /* Align text to the left */
+  align-items: flex-start; /* Align the content to the top */
+}
+
+/* Video time box style */
+.video-time-box {
+  position: absolute; /* Position the box absolutely within its container */
+  bottom: 10px; /* Set the distance from the bottom of the container */
+  right: 10px; /* Set the distance from the right of the container */
+  background-color: rgba(0, 0, 0, 0.7); /* Apply a semi-transparent black background */
+  color: white; /* Text color */
+  padding: 4px 8px; /* Add padding to the top and bottom (4px) and left and right (8px) */
+  font-size: 12px; /* Set the font size */
+  border-top-left-radius: 5px; /* Round the top-left corner */
+  z-index: 1; /* Adjust the z-index to position the box above other elements */
+}
+
+/* Title Styles */
+.content h2 {
+  font-size: 14px; /* Set the font size for video titles */
+  font-family: 'Roboto', 'Arial', sans-serif; /* Define the font family */
+  margin: 0 0 5px; /* Add margin to separate the title and channel name */
+  white-space: normal; /* Adjust white-space as needed */
+  max-width: 300px; /* Set the maximum width for the title */
+  font-weight: bold; /* Make the text bold */
+  padding: 10px; /* Add padding as needed */
+}
+
+/* Link Styles for Video Titles */
+.content h2 a {
+  text-decoration: none; /* Remove the underline from links */
+  color: #f1f1f1; /* Set the desired link color for video titles */
+}
+
+/* Modify the baseline alignment of text inside .content p elements */
+.content p {
+  color: #aaa; /* Set the text color for paragraphs */
+  vertical-align: baseline; /* Adjust the baseline alignment as needed */
+  font-size: 14px; /* Set the font size for paragraphs */
+  margin: 5px 0 5px 50px; /* Add margin as needed (top right bottom left) */
+}
+
+/* Style for the channel icon */
+.channel-icon img {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Maintain the aspect ratio */
+  border-radius: 50%; /* Create a circle shape */
+  margin-right: 10px; /* Add spacing between the icon and video title */
+  margin-top: 7px; /* Adjust the top margin for better alignment */
+  float: left; /* Float the channel icon to the left */
+}
+
+/* Dark Mode Styles */
+.dark-mode p {
+  color: #606060; /* Set the text color for dark mode */
+}
+
+/* Hover Styles */
+a:hover img.thumbnail {
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  /* Add other hover styles as needed */
+}
+
+/* Link Styles - Remove underlines from links within .content and .thumbnail-link */
+.content a {
+  color: #aaa; /* Set the link color */
+  text-decoration: none; /* Remove underlines from links */
+}
